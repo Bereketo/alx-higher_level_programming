@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+if __name__ == "__main__":
+
   ''' sum of 1 and 2'''
   a=1
   b=2
