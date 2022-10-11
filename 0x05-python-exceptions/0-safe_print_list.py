@@ -5,6 +5,6 @@ def safe_print_list(my_list=[], x=0):
         while(i <= x):
             for m in my_list:
                 i++
-         return i
+        return i
     except IndexError:
          print("index out of range")
