@@ -2,16 +2,18 @@
 
 def list_division(my_list_1, my_list_2, list_length):
     new_list = []
-    i = 0
-    for i in my_list_1 and for j in my_list_2:
+    for i in range(list_length):
         try:
-            new_list[i] = i/j
+          result = my_list_1[i]/my_list_2[i]
         except IndexError:
             print("out of  range")
+            result = 0
         except (TypeError, ValueError):
             print("Wrong type")
+            result = 0
         except ZeroDivisionError:
             print("division by 0")
+            result = 0
         finally:
-            new_list[i] = 0
+            new_list.append(result)
     return new_list
