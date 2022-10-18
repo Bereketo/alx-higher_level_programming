@@ -6,7 +6,7 @@ using "add_integer"
 first we import add from 0-add_integer module
 =====   ======= ==============================
 
- >>> add_integer = __import__('0-add_integer.py').add_integer
+ >>> add_integer = __import__('0-add_integer').add_integer
  >>> add_integer(3, 3)
  6
  >>> add_integer(-2, 10)
@@ -19,6 +19,12 @@ Testing for floating values
  7
  >>> add_integer(5.7, 8.8)
  13
+
+ >>> add_integer(2)
+ 100
+ 
+ >>> add_integer(100.3, -2)
+ 98
  
 Testing with Non-Numbers
 -------------------------
