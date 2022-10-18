@@ -1,0 +1,38 @@
+The "0-add_integer" module
+==========================
+
+using "add_integer"
+-------------------
+first we import add from 0-add_integer module
+=====   ======= ==============================
+
+ >>> add_integer = __import__('0-add_integer.py').add_integer
+ >>> add_integer(3, 3)
+ 6
+ >>> add_integer(-2, 10)
+ 8
+ 
+Testing for floating values
+======================
+
+ >>> add_integer(2.4, 5)
+ 7
+ >>> add_integer(5.7, 8.8)
+ 13
+ 
+Testing with Non-Numbers
+-------------------------
+ >>> add_integer(4,'data')
+ Traceback (most recent call last):
+ TypeError: b must be an integer
+ 
+ >>> add_integer('string', 8)
+ Traceback (most recent call last):
+ TypeError: a must be an integer
+ 
+When both are non-numbers
+-------------------------
+
+ >>> add_integer('hi', 'what')
+ Traceback (most recent call last):
+ TypeError: a must be an integer
