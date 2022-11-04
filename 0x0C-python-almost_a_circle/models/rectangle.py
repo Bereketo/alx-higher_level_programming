@@ -110,15 +110,18 @@ class Rectangle(Base):
         if args and len(args) != 0:
             m = 0
             for arg in args:
-                if m = 0:
-                    self.id = arg
-                elif m = 1:
+                if m == 0:
+                    if arg is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = arg
+                elif m == 1:
                     self.width = arg
-                elif m = 2:
+                elif m == 2:
                     self.height = arg
-                elif m = 3:
+                elif m == 3:
                     self.x = arg
-                elif m = 4:
+                elif m == 4:
                     self.y = arg
                 m += 1
 
