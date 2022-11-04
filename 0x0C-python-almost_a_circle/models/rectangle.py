@@ -85,6 +85,13 @@ class Rectangle(Base):
 
     def display(self):
         """prints a rectangle with '#' symbol"""
+        if self.width == 0 or self.height == 0:
+            print("")
+            return
+        for k in range(self.x):
+            print("", end="")
+        for m in range(self.y):
+            print("")
         for a in range(self.width):
             for b in range(self.height):
                 print("#", end="")
