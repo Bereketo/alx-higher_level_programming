@@ -14,16 +14,16 @@ class Rectangle(Base):
              y     = the y coordinate of the rectangle
             id     = the id of the rectangle
         """
-        self._width = width
-        self._height = height
-        self._x = x
-        self._y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
     @property
     def width(self):
         """sets/gets the width of the rectangle"""
-        return self._width
+        return self.__width
 
     @width.setter
     def width(self, width):
@@ -32,12 +32,12 @@ class Rectangle(Base):
         elif width <= 0:
             raise ValueError("width must be > 0")
         else:
-            self._width = width
+            self.__width = width
 
     @property
     def height(self):
         """sets/gets the height of the rectangle"""
-        return self._height
+        return self.__height
 
     @height.setter
     def height(self, height):
@@ -46,12 +46,12 @@ class Rectangle(Base):
         elif height <= 0:
             raise ValueError("height must be > 0")
         else:
-            self._height = height
+            self.__height = height
 
     @property
     def x(self):
         """sets/gets the x coordinate of the rectangle"""
-        return self._x
+        return self.__x
 
     @x.setter
     def x(self, x):
@@ -60,12 +60,12 @@ class Rectangle(Base):
         elif x < 0:
             raise ValueError("x must be >= 0")
         else:
-            self._x = x
+            self.__x = x
 
     @property
     def y(self):
         """sets/gets the y coordintates of the rectangle"""
-        return self_.y
+        return self__.y
 
     @y.setter
     def y(self, y):
@@ -74,4 +74,4 @@ class Rectangle(Base):
         elif y < 0:
             raise ValueError("y must be >= 0")
         else:
-            self._y = y
+            self.__y = y
