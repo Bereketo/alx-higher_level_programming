@@ -95,5 +95,5 @@ class Rectangle(Base):
            to return the rectangle in different format
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
-                                                        self.y, self.width,
-                                                        self.height)
+                                                       self.y, self.width,
+                                                       self.height)
