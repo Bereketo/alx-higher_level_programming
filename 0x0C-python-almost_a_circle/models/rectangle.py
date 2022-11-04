@@ -75,6 +75,6 @@ class Rectangle(Base):
     def y(self, var):
         if not isinstance(var, int):
             raise TypeError("y must be an integer")
-        if value < 0:
+        if var < 0:
             raise ValueError("y must be >= 0")
         self.__y = var
