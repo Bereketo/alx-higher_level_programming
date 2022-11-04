@@ -94,6 +94,6 @@ class Rectangle(Base):
         """overrides the __str__ method
            to return the rectangle in different format
         """
-        return ("[Rectangle] ({}) {}/{} - {}/{} ".format(self.id, self.x,
-                                                         self.y, self.width,
-                                                         self.height))
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
+                                                        self.y, self.width,
+                                                        self.height)
