@@ -5,6 +5,7 @@
 class Rectangle(Base):
     """a class rectangle
     """
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """initializes the rectangle
            Args:
@@ -26,12 +27,12 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self, value):
-        if type(value) != int:
+    def width(self, var):
+        if type(var) != int:
             raise TyperError("width must be an integer")
-        if value <= 0:
+        if var <= 0:
             raise ValueError("width must be > 0")
-        self.__width = value
+        self.__width = var
 
     @property
     def height(self):
@@ -39,12 +40,12 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self, value):
-        if type(value) != int:
+    def height(self, var):
+        if type(var) != int:
             raise TypeError("height must be an integer")
-        if height <= 0:
+        if var <= 0:
             raise ValueError("height must be > 0")
-        self.__height = value
+        self.__height = var
 
     @property
     def x(self):
@@ -52,12 +53,12 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    def x(self, x):
-        if not isinstance(x, int):
+    def x(self, var):
+        if not isinstance(var, int):
             raise TypeError("x must be an integer")
-        if x < 0:
+        if var < 0:
             raise ValueError("x must be >= 0")
-        self.__x = x
+        self.__x = var
 
     @property
     def y(self):
@@ -65,9 +66,9 @@ class Rectangle(Base):
         return self__.y
 
     @y.setter
-    def y(self, y):
-        if not isintance(y, int):
+    def y(self, var):
+        if not isintance(var, int):
             raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
-        self.__y = y
+        self.__y = var
