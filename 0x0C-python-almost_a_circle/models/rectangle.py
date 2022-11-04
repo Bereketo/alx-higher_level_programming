@@ -29,10 +29,9 @@ class Rectangle(Base):
     def width(self, width):
         if not isinstance(width, int):
             raise TyperError("width must be an integer")
-        elif width <= 0:
+        if width <= 0:
             raise ValueError("width must be > 0")
-        else:
-            self.__width = width
+        self.__width = width
 
     @property
     def height(self):
@@ -43,10 +42,9 @@ class Rectangle(Base):
     def height(self, height):
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
-        elif height <= 0:
+        if height <= 0:
             raise ValueError("height must be > 0")
-        else:
-            self.__height = height
+        self.__height = height
 
     @property
     def x(self):
@@ -57,10 +55,9 @@ class Rectangle(Base):
     def x(self, x):
         if not isinstance(x, int):
             raise TypeError("x must be an integer")
-        elif x < 0:
+        if x < 0:
             raise ValueError("x must be >= 0")
-        else:
-            self.__x = x
+        self.__x = x
 
     @property
     def y(self):
@@ -71,7 +68,6 @@ class Rectangle(Base):
     def y(self, y):
         if not isintance(y, int):
             raise TypeError("y must be an integer")
-        elif y < 0:
+        if y < 0:
             raise ValueError("y must be >= 0")
-        else:
-            self.__y = y
+        self.__y = y
