@@ -57,7 +57,7 @@
        Results should display the score and the name (in this order)
        Records should be listed by descending score 
        The database name will be passed as an argument to the mysql command
-## File
+## Files
     0-list_databases.sql
     1-create_database_if_missing.sql
     2-remove_database.s
