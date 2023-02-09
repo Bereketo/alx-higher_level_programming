@@ -1,17 +1,17 @@
 #!/usr/bin/node
 
-const request = require("request");
+const request = require('request');
 
 const url = process.argv[2];
 
-request(url, function(error, response, body) {
+request(url, function (error, response, body) {
   if (error) {
     console.error(error);
   } else {
-    let tasks = JSON.parse(body);
-    let userTasks = {};
+    const tasks = JSON.parse(body);
+    const userTasks = {};
 
-    tasks.forEach(function(task) {
+    tasks.forEach(function (task) {
       if (task.completed) {
         if (!userTasks[task.userId]) {
           userTasks[task.userId] = 0;
@@ -20,9 +20,8 @@ request(url, function(error, response, body) {
       }
     });
 
-    for (let userId in userTasks) {
+    for (const userId in userTasks) {
       console.log(`User ID: ${userId} Completed Tasks: ${userTasks[userId]}`);
     }
   }
 });
-
